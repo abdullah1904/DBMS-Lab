@@ -1,11 +1,11 @@
-CREATE DATABASE LibraryDB;
+CREATE DATABASE [IF NOT EXIST]LibraryDB;
 use LibraryDB;
-CREATE TABLE Author(
+CREATE TABLE [IF NOT EXIST] Author(
     id int unique,
     name varchar(20),
     birthYear int
 );
-CREATE TABLE Books(
+CREATE TABLE [IF NOT EXIST] Books(
     id int unique,
     title varchar(20),
     genre varchar (20),
