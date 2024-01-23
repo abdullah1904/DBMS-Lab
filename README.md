@@ -6,6 +6,10 @@
     </thead>
     <tr>
         <td>1</td>
-        <td><a href="Lab1.sql">Lab 1</a></td>
+        <td><a href="Lab1.md">Lab 1</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="Lab2.md">Lab 2</a></td>
     </tr>
 </table>
