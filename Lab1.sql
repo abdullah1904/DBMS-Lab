@@ -1,15 +1,25 @@
-ALTER TABLE Author DROP COLUMN name;
-ALTER TABLE Books DROP COLUMN authorId;
+CREATE DATABASE LibraryDB;
+use LibraryDB;
+CREATE TABLE Author(
+    id int unique,
+    name varchar(20),
+    birthYear int
+);
+CREATE TABLE Books(
+    id int unique,
+    title varchar(20),
+    genre varchar (20),
+    authorId int,
+);
 
-ALTER TABLE AUTHOR ADD firstName varchar(100);
-ALTER TABLE AUTHOR ADD lastName varchar(100);
+INSERT INTO Author(id,name,birthYear) 
+values  (1,'Robert Green',1900),
+        (2,'Max Well',1870),
+        (3,'Napoleon Hill',1945);
+INSERT INTO Books(id,title,genre, authorId)
+values  (1,'50 Laws','Self Help',1),
+        (2,'Revolution','Historic',2),
+        (3,'Think and Grow Rich','Self Help',3);
 
-ALTER TABLE Books ADD authorEmail varchar(100);
-
-UPDATE Author set firstName = 'John', lastName = 'Well' where id = 1;
-UPDATE Author set firstName = 'Robert', lastName = 'Green' where id = 2;
-UPDATE Author set firstName = 'George', lastName = 'Paterson' where id = 3;
-
-UPDATE Books set authorEmail = 'johnwell@yahoo.com' where id = 1;
-UPDATE Books set authorEmail = 'robertgreen@uet.com' where id = 2;
-UPDATE Books set authorEmail = 'georgepaterson23@google.com' where id = 3;
+SELECT * FROM Author;
+SELECT * FROM Books;
