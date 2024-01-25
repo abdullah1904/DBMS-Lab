@@ -1,5 +1,5 @@
 <h1 align="center">DBMS Lab</h1>
-<table align="center" border="1" width="90%">
+<table align="center" border="1" width="100%">
     <thead width="100%">
         <th colspan=5>Lab No.</th>
     </thead>
