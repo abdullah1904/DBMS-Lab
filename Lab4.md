@@ -1,5 +1,5 @@
 <h1 align="center">DBMS Lab</h1>
-<h3>Lab 3 Tasks:</h3>
+<h3>Lab 4 Tasks:</h3>
 <p>Consider a database for managing information about students in a university. Create a table 
 named Students with the following specifications:<br/>
 <b>StudentID:</b>

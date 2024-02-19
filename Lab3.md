@@ -14,6 +14,7 @@ CREATE TABLE Employee(
 );
 ```
 
+<hr/>
 
 <p>1. Populate the Employee table with Data</p>
 
