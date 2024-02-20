@@ -37,19 +37,24 @@ VALUES  (121,'Psychology',-9);
 
 CREATE TABLE Enrollments(
 	enrollId INT PRIMARY KEY,
-	studentId INT UNIQUE,
-	courseId INT UNIQUE,
+	studentId INT,
+	courseId INT,
 	enrollDate DATE NOT NULL,
 	FOREIGN KEY(studentId) REFERENCES Student(id),
-	FOREIGN KEY(courseId) REFERENCES Courses(courseId)
+	FOREIGN KEY(courseId) REFERENCES Courses(courseId),
+	CONSTRAINT UniqueEnroll UNIQUE (studentId, courseId)
 );
 
 INSERT INTO Enrollments(enrollId,studentId,courseId,enrollDate) 
 VALUES	(525,1,112,'2022-12-05'),
 		(526,2,122,'2023-04-15'),
-		(527,3,214,'2023-10-01'),
-		(528,4,225,'2024-01-15'),
-		(529,5,226,'2024-01-20');
+		(527,4,214,'2023-10-01'),
+		(528,5,225,'2024-01-15'),
+		(529,1,226,'2024-01-20');
 
 INSERT INTO Enrollments(enrollId,studentId,courseId,enrollDate)
-VALUES (530,2,112,'2023-04-15');
+VALUES (530,1,112,'2023-04-15');
+
+SELECT * FROM Student;
+SELECT * FROM Courses;
+SELECT * FROM Enrollments;
